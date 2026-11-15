@@ -10,7 +10,7 @@ jobs:
         os: [macos-latest, ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/setup-homebrew@main
       - run: brew install --build-from-source arcbaseproject/tap/cedit
       - run: brew test arcbaseproject/tap/cedit
       - run: brew audit --strict arcbaseproject/tap/cedit
